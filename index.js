@@ -42,13 +42,19 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for (var i = 0; i < cart.length; i++){
-    if (item === cart[i].itemName){
-      cart.splice(i,1)
-    } else {
-      return "That item is not in your cart."
+    found = false;
+    for (var i = 0; i < cart.length; i++){
+        if (item == cart[i].itemName){
+            console.log(i)
+            cart.splice(i,1)
+            found = true;
+        }
     }
-  }
+    if (found === false) {
+        return "That item is not in your cart."
+    } else {
+        return cart;
+    }
 }
 
 function placeOrder(cardNumber) {
