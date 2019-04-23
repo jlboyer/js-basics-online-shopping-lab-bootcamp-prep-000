@@ -42,7 +42,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-    found = false;
+    var found = false;
     for (var i = 0; i < cart.length; i++){
         if (item == cart[i].itemName){
             console.log(i)
